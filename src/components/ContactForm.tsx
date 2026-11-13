@@ -3,7 +3,7 @@ import { useState, type ChangeEvent, type SubmitEvent } from "react"
 function ContactForm(){
     const [form, setForm] = useState({name: "", email: "", message: ""})
 
-    function handleChange(e: ChangeEvent<HTMLInputElement, HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>){
+    function handleChange(e: ChangeEvent<HTMLInputElement|HTMLTextAreaElement>){
         const {name, value} = e.target
         setForm(prev => ({...prev, [name]: value}))
     }

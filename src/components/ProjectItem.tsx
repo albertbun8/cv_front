@@ -6,7 +6,7 @@ type ProjectItemProp = {
 
 function ProjectItem({project}: ProjectItemProp){
     return(
-        <li>
+        <li className="project-card">
             <strong>{project.title}</strong> · {project.year}
             <ul>
                 {project.stack.map((item) => (

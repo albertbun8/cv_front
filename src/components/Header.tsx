@@ -10,7 +10,7 @@ function Header({name , title, email}: HeaderProps){
         <>
             <h1>{name}</h1>
             <p>{title}</p>
-            <a href={`mailto: ${email}`}>{email}</a>
+            <a href={`mailto:${email}`}>{email}</a>
         </>
     )
 }

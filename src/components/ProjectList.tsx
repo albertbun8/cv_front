@@ -22,16 +22,18 @@ function ProjectList({projectList}: ProjectListProps){
         <section>
             <h2>Projects</h2>
 
-            {CATEGORIES.map((item) => (
-                <button 
-                    key={item}
-                    aria-pressed={filter === item} 
-                    onClick={()=> selectCategory(item)}> {item}
-                    
-                </button>
-            ))}
+            <div className="filters">
+                {CATEGORIES.map((item) => (
+                    <button 
+                        className="filter-button"
+                        key={item}
+                        aria-pressed={filter === item} 
+                        onClick={()=> selectCategory(item)}>{item}
+                    </button>
+                ))}
+            </div>
 
-            <ul>
+            <ul className="project-grid">
                 {visibleProjects.map((item) => (
                     <ProjectItem 
                         key={item.id}
