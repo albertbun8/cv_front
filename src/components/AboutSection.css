@@ -1,0 +1,75 @@
+/* ---------- Who I am (carte qui chevauche le bas du hero) ---------- */
+/* Structure attendue : div.container > section.about-card */
+.about-card {
+  position: relative; /* passe au-dessus du hero */
+  margin-top: -48px;
+  background: var(--white);
+  border-radius: 20px;
+  padding: 48px;
+  box-shadow: 0 12px 32px rgba(11, 27, 51, 0.08);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+}
+
+.about-text {
+  flex: 1 1 420px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.about-text h2 {
+  margin: 0;
+  font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+  line-height: 1.2;
+}
+
+.about-text p {
+  margin: 0;
+  color: #33445E;
+}
+
+.about-stack {
+  flex: 1 1 300px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.about-stack h3 {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ---------- Chips (réutilisables ailleurs) ---------- */
+.skill-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-chip {
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--chip-bg);
+  color: var(--chip-text);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  .about-card {
+    padding: 28px 20px;
+    gap: 32px;
+  }
+}

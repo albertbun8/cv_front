@@ -1,16 +1,13 @@
-import ContactForm from "../components/ContactForm"
-import Header from "../components/Hero"
+import AboutSection from "../components/AboutSection"
+import Hero from "../components/Hero"
+import { skills } from "../data/skills"
 
 function AboutMePage(){
     return(
         <>
-            <Header
-                name="Albert Bun"
-                email='albert.bunwork@gmail.com'
-                title='Frontend Developer'
-            />
+            <Hero />
 
-            <ContactForm/>
+            <AboutSection skills = {skills}/>
         </>
     )
 }
