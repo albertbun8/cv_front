@@ -8,6 +8,7 @@
   max-width: var(--content-width);
   margin: 0 auto;
   min-height: 72px;
+  padding: 8px 0;
   display: flex;
   flex-wrap: wrap;
   align-items: center;

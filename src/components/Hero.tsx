@@ -8,7 +8,7 @@ function Hero(){
             <div className="container hero-inner">
                 <div className="hero-text">
                     <p className="hero-eyebrow">
-                        Montreal, Quebec
+                        Montréal, Québec
                     </p>
 
                     <h1>Hi, I'm Albert</h1>
