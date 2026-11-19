@@ -1,32 +1,25 @@
 import './App.css'
-import ContactForm from './components/ContactForm'
-import ExperienceList from './components/ExperienceList'
-import Header from './components/Header'
-import ProjectList from './components/ProjectList'
-import {experiences} from './data/experiences'
-import { projects } from './data/projects'
+
+import { Routes, Route } from 'react-router'
+import Layout from './components/Layout'
+import ExperiencePage from './pages/ExperiencePage'
+import ProjectsPage from './pages/ProjectsPage'
+import InterestsPage from './pages/InterestsPage'
+import ErrorPage from './pages/ErrorPage'
+import AboutMePage from './pages/AboutMePage'
 
 function App() {
-
-
   return (
-    <>
-      <Header 
-        name="Albert Bun"
-        title='Frontend Developer'
-        email='albert.bunwork@gmail.com'
-      />
-      
-      <ExperienceList
-        experienceList={experiences}
-      />
+    <Routes>
+        <Route element={<Layout />}>
+            <Route index element={<AboutMePage />} />
+            <Route path='/experiences' element={<ExperiencePage />} />
+            <Route path='/projects' element={<ProjectsPage />} />
+            <Route path='/interests' element={<InterestsPage />} />
 
-      <ProjectList 
-        projectList = {projects}
-      />
-
-      <ContactForm/>
-    </>
+            <Route path='*' element={<ErrorPage />} />
+        </Route>
+    </Routes>
   )
 }
 

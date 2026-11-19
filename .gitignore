@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Local practice / interview exercises (not part of the site)
+src/practice/
+src/TestGiro/

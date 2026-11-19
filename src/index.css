@@ -9,6 +9,13 @@
   --chip-text: #1E3A8A;
   --text: #1F2937;
   --white: #FFFFFF;
+  --nav-text: #C7D4EA;
+  --card-border: #D9E2F0;
+  --muted: #4A5B76;
+
+  /* Layout */
+  --content-width: 1120px;
+  --gutter: 24px;
 
   /* Typographie */
   --font-body: 'Inter', system-ui, sans-serif;
@@ -34,4 +41,23 @@ h2,
 h3 {
   font-family: var(--font-heading);
   color: var(--navy);
-} 
+}
+
+/* Footer toujours en bas, même sur une page courte */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Conteneur centré réutilisable pour les pages */
+.container {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
