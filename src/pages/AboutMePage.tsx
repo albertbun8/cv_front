@@ -1,5 +1,5 @@
 import ContactForm from "../components/ContactForm"
-import Header from "../components/Header"
+import Header from "../components/Hero"
 
 function AboutMePage(){
     return(

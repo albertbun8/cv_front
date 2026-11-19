@@ -1,10 +1,10 @@
-type HeaderProps = {
+type HeroProps = {
     name: string;
     title: string;
     email: string;
 }
 
-function Header({name , title, email}: HeaderProps){
+function Hero({name , title, email}: HeroProps){
 
     return(
         <>
@@ -15,4 +15,4 @@ function Header({name , title, email}: HeaderProps){
     )
 }
 
-export default Header
+export default Hero
