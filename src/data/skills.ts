@@ -1,0 +1,1 @@
+export const skills: string[] = ["React", "TypeScript", "JavaScript", "Next.js", "Java", "Spring Boot", "Kotlin", "Swift", "PostgreSQL", "Docker"]

@@ -52,9 +52,44 @@ h3 {
 
 /* Conteneur centré réutilisable pour les pages */
 .container {
-  max-width: var(--content-width);
+  /* + les 2 gouttières, pour aligner le contenu sur la nav du header */
+  max-width: calc(var(--content-width) + 2 * var(--gutter));
   margin: 0 auto;
   padding: 0 var(--gutter);
+}
+
+/* Section de page sous le hero (Explore, Glimpse…) */
+.page-section {
+  margin-top: 72px;
+}
+
+.section-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.section-title {
+  margin: 0;
+  font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+  line-height: 1.2;
+}
+
+/* Titre seul (sans .section-header autour) */
+.page-section > .section-title {
+  margin-bottom: 24px;
+}
+
+.section-link {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.section-link:hover {
+  color: var(--chip-text);
 }
 
 :focus-visible {
