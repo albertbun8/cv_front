@@ -1,0 +1,57 @@
+/* ---------- Explore : 3 cartes cliquables ---------- */
+/* Structure : section.container.page-section > h2.section-title + ul.explore-grid > li > Link.explore-card */
+.explore-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.explore-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 28px;
+  border-radius: 16px;
+  background: var(--white);
+  border: 1px solid var(--card-border);
+  color: var(--navy);
+  text-decoration: none;
+  transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+}
+
+.explore-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(11, 27, 51, 0.08);
+}
+
+.explore-highlight {
+  font-family: var(--font-heading);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--accent);
+}
+
+.explore-title {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.explore-description {
+  color: var(--muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .explore-card {
+    transition: none;
+  }
+
+  .explore-card:hover {
+    transform: none;
+  }
+}
