@@ -1,0 +1,143 @@
+/* ---------- Timeline des expériences ---------- */
+/* Structure :
+   ol.timeline
+     > li.timeline-item
+       > article.experience-card
+         > div.experience-head
+             > (img.experience-logo | div.experience-logo.logo-placeholder)
+             > div.experience-meta > h2.experience-role + p.experience-company + p.experience-period
+         > p.experience-summary
+         > ul.skill-list > li.skill-chip            (les tags, mêmes chips que l'About)
+         > ul.experience-points > li                (seulement si ouvert)
+         > button.btn-toggle                        */
+.timeline {
+  list-style: none;
+  margin: 56px 0 0;
+  padding: 0 0 0 28px;
+  border-left: 2px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.timeline-item {
+  position: relative;
+}
+
+/* Le point bleu sur la ligne */
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -38px;
+  top: 30px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 3px solid var(--bg);
+}
+
+.experience-card {
+  background: var(--white);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.experience-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.experience-logo {
+  width: 64px;
+  height: 64px;
+  flex: 0 0 64px;
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+.logo-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--chip-bg);
+  border: 2px dashed #8EA6CC;
+  color: #33445E;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.experience-meta {
+  flex: 1 1 300px;
+  min-width: 0;
+}
+
+.experience-meta p {
+  margin: 0;
+}
+
+.experience-role {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.3;
+}
+
+.experience-company {
+  font-weight: 600;
+  color: var(--chip-text);
+}
+
+.experience-period {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.experience-summary {
+  margin: 0;
+  color: #33445E;
+}
+
+.experience-points {
+  margin: 0;
+  padding-left: 20px;
+  color: #33445E;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.btn-toggle {
+  align-self: flex-start;
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 10px;
+  border: 1.5px solid var(--accent);
+  background: var(--white);
+  color: #1D4ED8;
+  font: 600 15px var(--font-body);
+  cursor: pointer;
+}
+
+.btn-toggle:hover {
+  background: var(--chip-bg);
+}
+
+@media (max-width: 600px) {
+  .timeline {
+    padding-left: 20px;
+  }
+
+  .timeline-item::before {
+    left: -30px;
+  }
+
+  .experience-card {
+    padding: 20px;
+  }
+}
