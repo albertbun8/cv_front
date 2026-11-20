@@ -24,8 +24,8 @@ function Hero(){
 
                     </div>
                 </div>
-                <div className="hero-portrait" role="img" aria-label="Portrait placeholder">
-
+                <div className="hero-portrait">
+                    <img src="/photos/portrait.jpg" alt="Portrait of Albert Bun" />
                 </div>
             </div>
         </section>

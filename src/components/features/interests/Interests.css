@@ -188,3 +188,15 @@
     transform: none;
   }
 }
+
+/* Lien optionnel d'un hobby (ex. profil Chess.com) */
+.hobby-link {
+  align-self: flex-start;
+  margin-top: 4px;
+  color: #1D4ED8;
+  font-weight: 600;
+}
+
+.hobby-link:hover {
+  color: var(--chip-text);
+}

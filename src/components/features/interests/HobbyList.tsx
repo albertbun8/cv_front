@@ -1,4 +1,4 @@
-import type { Hobby } from "../data/hobbies"
+import type { Hobby } from "../../../data/hobbies"
 import "./Interests.css"
 
 type HobbyListProps = {
@@ -20,6 +20,17 @@ function HobbyList({hobbies}: HobbyListProps){
                         <div className="hobby-body">
                             <h3 className="hobby-name">{item.name}</h3>
                             <p className="hobby-text">{item.text}</p>
+
+                            {item.link && (
+                                <a
+                                    className="hobby-link"
+                                    href={item.link.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    {item.link.label} →
+                                </a>
+                            )}
                         </div>
                     </li>
                 ))}

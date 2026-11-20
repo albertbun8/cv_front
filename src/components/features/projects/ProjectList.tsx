@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { CATEGORIES, type Project, type Category } from "../data/projects"
+import { CATEGORIES, type Project, type Category } from "../../../data/projects"
 import ProjectItem from "./ProjectItem"
 import "./Projects.css"
 

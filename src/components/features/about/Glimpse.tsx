@@ -1,6 +1,6 @@
 import { Link } from "react-router"
 import "./Glimpse.css"
-import type { Photo } from "../data/photo"
+import type { Photo } from "../../../data/photo"
 
 type GlimpseProps = {
     photoList: Photo[]
@@ -14,7 +14,7 @@ function Glimpse({photoList} : GlimpseProps){
                 <Link className="section-link" to={"/interests"}>All interests →</Link>
             </div>
             <ul className="photo-grid">
-                {photoList.map((item) => (
+                {photoList.slice(0,4).map((item) => (
                     <li key={item.id}>
                         {item.src 
                             ? <img src={item.src} alt={item.alt} />

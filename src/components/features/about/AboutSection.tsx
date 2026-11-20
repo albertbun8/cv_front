@@ -11,7 +11,6 @@ function AboutSection({skills} : AboutSectionProp){
                 <div className="about-text">
                     <h2>Who I am</h2>
                     <p>I'm a software engineering graduate from ÉTS (Aug. 2026) with four years at the Canada Revenue Agency, front-end and back-end work at a startup, and native mobile development on Parkus, a parking app for Montréal.</p>
-                    <p></p>
                 </div>
                 <div className="about-stack">
                     <h3>Core stack</h3>

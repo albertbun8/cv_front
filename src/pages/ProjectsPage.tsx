@@ -1,5 +1,5 @@
-import PageHeader from "../components/PageHeader"
-import ProjectList from "../components/ProjectList"
+import PageHeader from "../components/ui/PageHeader"
+import ProjectList from "../components/features/projects/ProjectList"
 import { projects } from "../data/projects"
 
 
