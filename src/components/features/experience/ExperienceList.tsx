@@ -1,4 +1,4 @@
-import type { Experience } from "../data/experiences"
+import type { Experience } from "../../../data/experiences"
 import ExperienceItem from "./ExperienceItem"
 import "./Experience.css"
 

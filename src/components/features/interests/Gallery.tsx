@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import type { Photo } from "../data/photo"
+import type { Photo } from "../../../data/photo"
 
 type GalleryProps = {
     photoList: Photo[]

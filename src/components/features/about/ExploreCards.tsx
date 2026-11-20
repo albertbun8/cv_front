@@ -1,5 +1,5 @@
 import { Link } from "react-router"
-import type { ExploreItem } from "../data/explore"
+import type { ExploreItem } from "../../../data/explore"
 import "./ExploreCards.css"
 
 type ExploreListProps = {

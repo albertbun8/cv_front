@@ -1,5 +1,5 @@
-import ExperienceList from "../components/ExperienceList"
-import PageHeader from "../components/PageHeader"
+import ExperienceList from "../components/features/experience/ExperienceList"
+import PageHeader from "../components/ui/PageHeader"
 import { experiences } from "../data/experiences"
 
 function ExperiencePage(){
