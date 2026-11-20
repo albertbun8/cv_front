@@ -1,4 +1,5 @@
 import AboutSection from "../components/AboutSection"
+import ContactForm from "../components/ContactForm"
 import ExploreCards from "../components/ExploreCards"
 import Glimpse from "../components/Glimpse"
 import Hero from "../components/Hero"
@@ -13,6 +14,7 @@ function AboutMePage(){
             <AboutSection skills = {skills}/>
             <ExploreCards exploreList={exploreList}/>
             <Glimpse photoList = {photoList}/>
+            <ContactForm />
         </>
     )
 }
