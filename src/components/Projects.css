@@ -5,7 +5,7 @@
          > button.filter-button (aria-pressed)
      > ul.project-grid
          > li > article.project-card
-             > (img.project-image | div.project-image.image-placeholder)
+             > (img.project-image | div.project-image.image-placeholder)  (.image-placeholder : index.css)
              > div.project-body
                  > div.project-head > h2.project-title + span.project-year
                  > p.project-summary
@@ -72,19 +72,6 @@
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
-}
-
-.image-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 16px;
-  text-align: center;
-  background: #DCE6F5;
-  border-bottom: 2px dashed #8EA6CC;
-  color: #33445E;
-  font-weight: 600;
-  font-size: 14px;
 }
 
 .project-body {
