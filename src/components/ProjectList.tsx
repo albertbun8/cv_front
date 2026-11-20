@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { CATEGORIES, type Project, type Category } from "../data/projects"
 import ProjectItem from "./ProjectItem"
+import "./Projects.css"
 
 type ProjectListProps = {
     projectList: Project[]
@@ -19,12 +20,11 @@ function ProjectList({projectList}: ProjectListProps){
 
 
     return(
-        <section>
-            <h2>Projects</h2>
-
-            <div className="filters">
+        <section className="container projects">
+            <div className="filters" role="group" aria-label="Filter projects">
                 {CATEGORIES.map((item) => (
                     <button 
+                        type="button"
                         className="filter-button"
                         key={item}
                         aria-pressed={filter === item} 

@@ -1,0 +1,138 @@
+/* ---------- Page Projects : filtres + grille de cartes ---------- */
+/* Structure :
+   section.container.projects
+     > div.filters (role="group", aria-label="Filter projects")
+         > button.filter-button (aria-pressed)
+     > ul.project-grid
+         > li > article.project-card
+             > (img.project-image | div.project-image.image-placeholder)
+             > div.project-body
+                 > div.project-head > h2.project-title + span.project-year
+                 > p.project-summary
+                 > ul.skill-list > li.skill-chip
+                 > div.project-links > a      (seulement s'il y a des liens) */
+.projects {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* ----- Filtres ----- */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filter-button {
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 999px;
+  border: 1.5px solid var(--border);
+  background: var(--white);
+  color: var(--chip-text);
+  font: 600 15px var(--font-body);
+  cursor: pointer;
+}
+
+.filter-button:hover {
+  border-color: var(--accent);
+}
+
+/* Le filtre actif : aria-pressed="true" (posé par React) */
+.filter-button[aria-pressed="true"] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--white);
+}
+
+/* ----- Grille ----- */
+.project-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
+  gap: 24px;
+}
+
+.project-card {
+  height: 100%;
+  background: var(--white);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  overflow: hidden; /* l'image suit les coins arrondis */
+  display: flex;
+  flex-direction: column;
+}
+
+.project-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.image-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  text-align: center;
+  background: #DCE6F5;
+  border-bottom: 2px dashed #8EA6CC;
+  color: #33445E;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.project-body {
+  flex: 1 1 auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.project-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.project-title {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.3;
+}
+
+.project-year {
+  flex-shrink: 0;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.project-summary {
+  margin: 0;
+  color: #33445E;
+}
+
+/* Liens collés en bas de la carte, même si les résumés n'ont pas la même longueur */
+.project-links {
+  margin-top: auto;
+  padding-top: 8px;
+  display: flex;
+  gap: 20px;
+}
+
+.project-links a {
+  color: #1D4ED8;
+  font-weight: 600;
+}
+
+.project-links a:hover {
+  color: var(--chip-text);
+}
