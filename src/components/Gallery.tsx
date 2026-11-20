@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import type { Photo } from "../data/photo"
 
 type GalleryProps = {
@@ -7,6 +7,18 @@ type GalleryProps = {
 
 function Gallery({ photoList }: GalleryProps) {
     const [selected, setSelected] = useState<Photo | null>(null)
+
+    useEffect(() => {
+        if(!selected) return
+
+        function handleKeyDown(event: KeyboardEvent){
+            if(event.key === "Escape"){
+                setSelected(null)
+            }
+        }
+
+        window.addEventListener("keydown", handleKeyDown)
+     }, [selected])
 
     function handleClick(item: Photo){
         setSelected(item)
