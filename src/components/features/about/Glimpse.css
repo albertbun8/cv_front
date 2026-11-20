@@ -35,3 +35,11 @@
   font-weight: 600;
   font-size: 14px;
 }
+
+/* Mobile : 2 colonnes au lieu d'une grande photo par ligne */
+@media (max-width: 600px) {
+  .photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
