@@ -18,6 +18,10 @@ function Gallery({ photoList }: GalleryProps) {
         }
 
         window.addEventListener("keydown", handleKeyDown)
+
+        return () => {
+            window.removeEventListener("keydown", handleKeyDown)
+        }
      }, [selected])
 
     function handleClick(item: Photo){
